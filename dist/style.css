@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    font-size: 14px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+} 
+ 
+ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: teal;
+}
+
+ul li {
+    display: inline;
+    float: left;
+}
+
+li a {
+    display: block;
+    padding: 10px 15px;
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+
+li a:hover {
+    background-color: rgb(3, 78, 78);
+}
+
+#about {
+    float: right;
+
+}
