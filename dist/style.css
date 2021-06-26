@@ -2,7 +2,9 @@ body{
     margin: 0;
     font-size: 14px;
     font-family:Verdana, Geneva, Tahoma, sans-serif
+
 } 
+
  
  ul {
     list-style-type: none;
@@ -152,3 +154,46 @@ li a:hover {
 
 
   }
+
+
+
+  /* IMAGE SLIDER */
+
+
+#main{ 
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+}
+
+#slider{
+    display: flex;
+    width: 80%;
+    max-width: 800px;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid black;
+
+
+
+}
+
+ .image{
+     display:flex;
+     align-content: center;
+     justify-content: center;
+     height: 300px;
+     width: 500px;
+ }
+
+ #img2, #img3{
+     display: none;
+ }
+
+
+
+ image > img {
+
+ }

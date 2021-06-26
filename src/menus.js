@@ -26,9 +26,6 @@ function menuController(){
         }
     })();
 
-
-
-
     //Click away from the menu to make it disappear
     (function(){
         window.addEventListener('mouseover', clickAway);
@@ -44,12 +41,6 @@ function menuController(){
         }
     })();
 
-
-
-
-
-
-
     //Mobile menu expand
     (function(){
         let menuBtn = document.getElementById('menu');
@@ -64,9 +55,7 @@ function menuController(){
             element.classList.toggle('showMobile');
             })
     }
-
     })();
-
 }
 
 export default menuController;
