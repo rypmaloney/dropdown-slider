@@ -34,14 +34,13 @@ li a:hover {
     float: right;
 }
 
-#down-content {
+.down-content {
     display: flex;
     flex-direction: column;
-    line-height:0;
+    align-content: center;
+    margin: auto;
     height: 0;
     overflow: hidden;
-
-    
 
     position: absolute;
     min-width: 150px;
@@ -50,14 +49,16 @@ li a:hover {
 
 }
 
-#down-content a{
+.down-content  a{
     background-color: rgba(28, 129, 129, 0.438);
+}
 
-    
+.down-content a:hover{
+    background-color: rgba(17, 87, 87, 0.438);
 }
 
 .show{
-    height: 75px !important;
+    height: 110px;
     transition: height 300ms;
 
 }
