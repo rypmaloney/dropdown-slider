@@ -15,10 +15,12 @@ body{
 ul li {
     display: inline;
     float: left;
-    margin-left: 5px
+    margin-left: 10px;
+    margin-right: 10px;
+
 }
 
-li a {
+.menu-item {
     display: block;
     padding: 10px 15px;
     color: whitesmoke;
@@ -26,12 +28,17 @@ li a {
 
 }
 
+
 li a:hover {
     background-color: rgb(3, 78, 78);
 }
 
+
+
 #about {
-    float: right;
+    float: right !important;
+    width: 100%;
+    
 }
 
 .down-content {
@@ -44,13 +51,16 @@ li a:hover {
 
     position: absolute;
     min-width: 150px;
-    box-shadow: 4px 4px 12px 2px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 4px 4px 12px 2px rgba(0, 0, 0, 0.2);*/
     transition: height 300ms;
 
 }
 
 .down-content  a{
-    background-color: rgba(28, 129, 129, 0.438);
+    background-color: rgb(124, 179, 179);
+    padding: 10px 15px;
+    color: whitesmoke;
+    text-decoration: none;
 }
 
 .down-content a:hover{
@@ -59,7 +69,7 @@ li a:hover {
 
 .show{
     height: 110px;
-    transition: height 300ms;
+    transition: height 500ms;
 
 }
 
@@ -67,3 +77,82 @@ li a:hover {
     width: 100%;
     height: 100%;
 }
+
+#about{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+      background-color: olive;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: teal;
+    }
+    
+    ul li {
+        width: 100%;
+        margin: 0;
+        height: auto;
+    
+    }
+
+    #about{
+        float:right;
+        margin: auto;
+    
+        
+    }
+    
+    .menu-item {
+        height: 0px;
+        padding: 0;
+        color: whitesmoke;
+        text-decoration: none;
+        text-align: center;
+    }
+
+
+    #about{
+        display: block;
+
+    }
+    #menu{
+        float: right;
+        padding: 5px;
+    }
+
+    .bar {
+        width: 15px;
+        height: 2px;
+        background-color: black;
+        margin: 3px 0;
+        background-color: whitesmoke;
+      }
+
+      .showMobile{
+          height: 20px;
+          display: block;
+          transition: height 500ms;
+          padding: 20px;
+      }
+
+      .down-content{
+          width: 100%;
+          position: relative;
+      }
+
+    
+      .down-item{
+          width: 100%;
+
+
+      }
+
+
+  }
