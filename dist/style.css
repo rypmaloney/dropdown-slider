@@ -22,6 +22,7 @@ ul li {
 
 }
 
+
 .menu-item {
     display: block;
     padding: 10px 15px;
@@ -55,6 +56,7 @@ li a:hover {
     min-width: 150px;
     /*box-shadow: 4px 4px 12px 2px rgba(0, 0, 0, 0.2);*/
     transition: height 300ms;
+    z-index: 99999 !important;
 
 }
 
@@ -176,34 +178,47 @@ li a:hover {
     height: 400px;
     justify-content: center;
     align-content: center;
-    border: 1px solid black;
+    background-color: rgb(233, 230, 230);
     overflow: hidden;
-
 
 
 }
 
+#sliderContainer{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
  .image{
-     display:flex;
-     align-content: center;
-     justify-content: center;
-     height: 300px;
-     width: 450px;
-     margin: 20px;
-     padding: 0;
-     object-fit: cover;
-     display: none;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    width: 0px;
+    margin: 0px;
+    padding: 0;
+    object-fit: cover;
+    box-shadow: 3px 2px 12px gray;
 
 
  }
 
 .active{
-    filter: grayscale(0%);
-    transition: filter 400ms;
-    display: block;
-    height: 400px;
+    filter: opacity (100%);
+    display: block; 
+    height: 370px;
     width: 500px;
+    margin: 20px;
+    transition: width 500ms;
 
+
+
+    
+ }
+
+ .none{
+    opacity: 0%;
  }
 
  .active img {
@@ -212,11 +227,21 @@ li a:hover {
  }
 
  .left, .right{
-    filter: grayscale(90%);
+    opacity: 70%;
     display: block;
     margin-top: 60px;
-     
+    width: 450px;
+    height: 300px;
+    transition: width 500ms;
+   
+
+
+    
  }
+
+
+
+ 
 
 
 img {
@@ -225,7 +250,5 @@ img {
      height: 300px;
      width: 450px;
      object-fit: cover;
-     
-     
 
  }
