@@ -76,7 +76,7 @@ function changeActive(activeIndex){
     if (activeIndex == 0){
         mover.style.marginLeft =  `${marginFactor}px`
     }else {
-        mover.style.marginLeft = `${marginFactor - 502*activeIndex}px` 
+        mover.style.marginLeft = `${marginFactor - 455*activeIndex}px` 
     }
 
 

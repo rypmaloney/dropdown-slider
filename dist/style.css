@@ -200,11 +200,13 @@ li a:hover {
     white-space: nowrap;
     width: 100000px;
     height: 450px;
+    min-height: 450px;
 
 }
 #mover{
     display: inline;
     margin-left: 125px;
+    transition: margin 500ms;
 }
 
 .controls{
@@ -225,14 +227,15 @@ li a:hover {
 
  .image{
     display: inline;
-    height: 305px;
-    min-height: 305px;
-    width: 450px;
+    height: 0;
     margin: 0px 25px 0px 25px;
     padding: 0;
-    object-fit: cover;
-    background-color:gray;
-    box-shadow: 3px 2px 12px gray;
+
+    
+
+
+
+
 
  }
 
@@ -243,37 +246,43 @@ li a:hover {
     height: 370px;
     width: 500px;
     min-height: 370px;
+
+    
     
 
 
  }
 
- .none{
-    opacity: 0%;
-    transition: width 700ms;
- }
 
  .active img {
     height: 370px;
     width: 500px;
+    transition: height 200ms;
+    
  }
 
  .left, .right{
     opacity: 70%;
     display: inline;
-    margin-top: 60px;
     width: 450px;
     height: 300px;
+
   
  }
+.left img, .right img {
+    transition: height 200ms;
+    margin-bottom: 0px;
 
+}
 
 img {
      margin: 0;
      padding: 0;
      height: 300px;
-     width: 450px;
-     object-fit: cover;
+    align-self: end;
+     box-shadow: 3px 2px 12px gray;
+
+
 
  }
 
