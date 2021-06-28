@@ -7,7 +7,7 @@ menuController()
 
 const images = document.getElementsByClassName('image');
 
-let currentNumber = 0;
+
 
 let arrowRight = document.getElementById('arrowRight')
 arrowRight.addEventListener('click', ()=> moveRight())
@@ -15,14 +15,20 @@ arrowRight.addEventListener('click', ()=> moveRight())
 let arrowLeft = document.getElementById('arrowLeft')
 arrowLeft.addEventListener('click', ()=> moveLeft())
 
+
+
+let currentNumber = 0;
 function moveRight(){
     currentNumber++
+
+    if (currentNumber > images.length - 1){currentNumber = 0}
     changeActive(currentNumber)
     return currentNumber
 }
 
 function moveLeft(){
     currentNumber--
+    if (currentNumber < 0){currentNumber = 6}
     changeActive(currentNumber)
     return currentNumber
 }
@@ -70,6 +76,16 @@ function changeActive(activeIndex){
     images[activeIndex].classList.add('active');
     images[right].classList.add('right');
 
+
+    changeMargin(activeIndex)
+
+    updateMarker(activeIndex)
+
+
+}
+
+
+function changeMargin(activeIndex){
     let marginFactor = 125
     let mover = document.getElementById('mover')
 
@@ -78,14 +94,23 @@ function changeActive(activeIndex){
     }else {
         mover.style.marginLeft = `${marginFactor - 455*activeIndex}px` 
     }
+}
 
 
+function updateMarker(activeIndex){
+    let marks = document.getElementsByClassName('slideMark');
+
+    Array.from(marks).forEach(element => {
+        element.style.backgroundColor= 'gainsboro'})
+
+    marks[activeIndex].style.backgroundColor = 'black';
 }
 
 
 
 
 changeActive(currentNumber)
+setInterval(function(){ moveRight(); }, 5000);
 
 
 
