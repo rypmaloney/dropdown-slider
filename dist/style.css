@@ -171,14 +171,14 @@ li a:hover {
 }
 
 #slider{
-    display: flex;
-    width: 80%;
+    margin: auto;
+    width: 800px;
     margin-top: 40px;
-    max-width: 800px;
-    height: 400px;
+    height: 450px;
     justify-content: center;
     align-content: center;
     background-color: rgb(233, 230, 230);
+    border: 2px solid gainsboro;
     overflow: hidden;
 
 
@@ -187,38 +187,69 @@ li a:hover {
 #sliderContainer{
     width: 100%;
     display: flex;
+    flex-direction: column;
+
     align-content: center;
     justify-content: center;
 }
 
- .image{
-    display:flex;
+#track{
+    display: block;
+    margin-top: 30px;
+    float: left;
+    white-space: nowrap;
+    width: 100000px;
+    height: 450px;
+
+}
+#mover{
+    display: inline;
+    margin-left: 125px;
+}
+
+.controls{
+    display: flex;
+    flex-direction: row;
+    width: 800px;
     align-content: center;
     justify-content: center;
-    width: 0px;
-    margin: 0px;
+    margin: auto;
+}
+
+#arrowRight, #arrowLeft{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    margin: 0;
+}
+
+ .image{
+    display: inline;
+    height: 300px;
+    min-height: 300px;
+    width: 450px;
+    margin: 0px 25px 0px 25px;
     padding: 0;
     object-fit: cover;
     box-shadow: 3px 2px 12px gray;
 
-
  }
+
 
 .active{
     filter: opacity (100%);
-    display: block; 
+    display: inline; 
     height: 370px;
     width: 500px;
-    margin: 20px;
-    transition: width 500ms;
-
-
-
+    min-height: 370px;
     
+
+
  }
 
  .none{
     opacity: 0%;
+    transition: width 700ms;
  }
 
  .active img {
@@ -228,20 +259,12 @@ li a:hover {
 
  .left, .right{
     opacity: 70%;
-    display: block;
+    display: inline;
     margin-top: 60px;
     width: 450px;
     height: 300px;
-    transition: width 500ms;
-   
-
-
-    
+  
  }
-
-
-
- 
 
 
 img {
@@ -252,3 +275,5 @@ img {
      object-fit: cover;
 
  }
+
+ 

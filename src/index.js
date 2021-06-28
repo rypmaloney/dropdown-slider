@@ -48,9 +48,10 @@ function makeSlider(activeIndex){
     images[left].classList.add('left');
     images[activeIndex].classList.add('active');
     images[right].classList.add('right');
+    
 }
 
-makeSlider(5)
+//makeSlider(5)
 
 
 
