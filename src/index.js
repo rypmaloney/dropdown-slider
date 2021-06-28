@@ -7,6 +7,27 @@ menuController()
 
 const images = document.getElementsByClassName('image');
 
+let currentNumber = 0;
+
+let arrowRight = document.getElementById('arrowRight')
+arrowRight.addEventListener('click', ()=> moveRight())
+
+let arrowLeft = document.getElementById('arrowLeft')
+arrowLeft.addEventListener('click', ()=> moveLeft())
+
+function moveRight(){
+    currentNumber++
+    changeActive(currentNumber)
+    return currentNumber
+}
+
+function moveLeft(){
+    currentNumber--
+    changeActive(currentNumber)
+    return currentNumber
+}
+
+
 
 function clearSlider(){
     for(let i=0; i<images.length; i++){
@@ -18,14 +39,14 @@ function clearSlider(){
             images[i].classList.remove('right')
         }
 
-        images[i].classList.add('none')
+
     }
     
 
 }
 
 
-function makeSlider(activeIndex){
+function changeActive(activeIndex){
     clearSlider()
     let left
     let right
@@ -48,10 +69,23 @@ function makeSlider(activeIndex){
     images[left].classList.add('left');
     images[activeIndex].classList.add('active');
     images[right].classList.add('right');
-    
+
+    let marginFactor = 125
+    let mover = document.getElementById('mover')
+
+    if (activeIndex == 0){
+        mover.style.marginLeft =  `${marginFactor}px`
+    }else {
+        mover.style.marginLeft = `${marginFactor - 502*activeIndex}px` 
+    }
+
+
 }
 
-//makeSlider(5)
+
+
+
+changeActive(currentNumber)
 
 
 
