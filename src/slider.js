@@ -9,8 +9,8 @@ function sliderController(){
     arrowLeft.addEventListener('click', ()=> moveLeft())
 
 
-
     let currentNumber = 0;
+
     function moveRight(){
         currentNumber++
 

@@ -207,7 +207,7 @@ li a:hover {
 #mover{
     display: inline;
     margin-left: 125px;
-    transition: margin 500ms;
+    transition: margin 500ms ease-in;
 }
 
 .controls{
@@ -254,7 +254,7 @@ li a:hover {
     height:10px;
     border-radius: 5px;
     background-color: gainsboro;
-    transition: background-color 200ms;
+    transition: background-color 200ms ;
 }
 
 
@@ -287,6 +287,7 @@ li a:hover {
  .active img {
     height: 370px;
     width: 500px;
+    transition: height 500ms ease-in;
 
     
  }
@@ -296,6 +297,7 @@ li a:hover {
     display: inline;
     width: 450px;
     height: 300px;
+
 
   
  }
